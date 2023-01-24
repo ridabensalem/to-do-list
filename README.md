@@ -2,14 +2,12 @@
 
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
 
   <h3><b>To do list Porject</b></h3>
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -31,13 +29,11 @@
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [To do list project ] <a name="about-project"></a>
 
 
 
-**[To do list ]** is a small app that's add and remove books 
+**[To do list ]** is a small app that's add,display, remove tasks 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,50 +43,46 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.javascript.com/">Javascript</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Client </summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a https://html.com//">Html</a></li>
   </ul>
 </details>
-
 <details>
-<summary>Database</summary>
+  <summary>Client </summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a https://Css.com//">Css </a></li>
   </ul>
 </details>
 
-<!-- Features -->
+
+
+
 
 ### Key Features <a name="key-features"></a>
 
 
-- **[Adding Books]**
-- **[Removing Books ]**
+- **[Displaying Tasks]**
+- **[Ordering Tasks depending on priority ]**
 - **[Displaying Books ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -98,75 +90,21 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+<code>git clone git@github.com:ridabensalem/to-do-list.git</code>
 
 ### Install
 
 Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+Git SSH
+<code>git clone git@github.com:ridabensalem/to-do-list.git</code><br>
+Github CLI
+<code>gh repo clone ridabensalem/to-do-list</code><br>
+HTTPS
+<code>https://github.com/ridabensalem/to-do-list.git</code><br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,7 +144,6 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -215,11 +152,9 @@ If you like this project please give it a start and share it with your freinds
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- LICENSE -->
-
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
