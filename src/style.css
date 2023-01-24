@@ -1,3 +1,50 @@
-body {
-    background-color: bisque;
+* body {
+  background-color: #f7f5f7;
+  display: flex;
+  justify-content: center;
+}
+
+.refresh {
+  position: relative;
+  left: 64vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 8px;
+  width: 80vh;
+  background-color: #fff;
+  margin: 30vh 0;
+}
+
+#task_input {
+  border: none;
+  outline: none;
+  font-style: italic;
+  font-size: 20px;
+}
+
+#task_input:active {
+  border: none;
+}
+
+hr {
+  border: 1px inset  rgba(0, 0, 0, 0.08);
+  width: 104%;
+  position: relative;
+  right: 5%;
+}
+
+.clear {
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  height: 4vh;
+  padding-top: 20px;
+}
+
+.clear a {
+  color: gray;
 }
