@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Wbpack Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="container">
+        <ul id="to_do_container">
+        <li class="title">Today's to do <img src="assets/img/refresh.svg" alt="refresh icon" class="refresh"></li>
+        
+        <hr >
+        <li><input type="text" name="task" id="task_input" placeholder="Add to your list..."></li>
+        <hr>
+        </ul>
+        <li class="clear"><a href="#">Clear all completed</a> </li>
+    </div>
+  
+    <script src="index.js" type="module"></script>
 </body>
 </html>
