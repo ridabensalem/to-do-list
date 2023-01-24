@@ -32,7 +32,6 @@
 # 📖 [To do list project ] <a name="about-project"></a>
 
 
-
 **[To do list ]** is a small app that's add,display, remove tasks 
 
 ## 🛠 Built With <a name="built-with"></a>
