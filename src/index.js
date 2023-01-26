@@ -1,4 +1,3 @@
-import './style.css';
-import fetchingData from './modules/fetch.js';
+import tasksApp from './modules/tasksApp.js';
 
-fetchingData();
+tasksApp();
