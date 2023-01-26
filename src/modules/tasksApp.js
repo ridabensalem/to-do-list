@@ -1,4 +1,5 @@
 const tasksApp = () => {
+  /* eslint no-use-before-define: "error" */
   const btn = document.querySelector('form');
   const listInput = document.querySelector('#lists-input');
   const cleanAllDone = document.querySelector('#clearDones');
@@ -24,7 +25,9 @@ const tasksApp = () => {
       const todoObject = new TodoListStore(listInput.value, completed, index);
       listArray = [...listArray, todoObject];
       localStorage.setItem('listArray', JSON.stringify(listArray));
+      // eslint-disable-next-line no-use-before-define
       UI.displayData();
+      // eslint-disable-next-line no-use-before-define
       UI.cleanInputs();
     }
   });
