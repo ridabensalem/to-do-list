@@ -1,50 +1,65 @@
-* body {
-  background-color: #f7f5f7;
+main {
+  box-shadow: 12px 12px 12px 9px silver;
+  width: 45% !important;
+  margin-top: 12%;
+  padding: 4px 30px;
+}
+
+#list,
+#todays {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid darkgray;
+  padding: 12px;
+  box-shadow: 2px 2px 2px darkgrey;
 }
 
-.refresh {
-  position: relative;
-  left: 64vh;
+#list span {
+  font-size: 15px;
 }
 
-li {
-  list-style-type: none;
+#defaultCheck1 {
+  border-color: black;
+  margin-right: 12px;
 }
 
-.container {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 8px;
-  width: 80vh;
-  background-color: #fff;
-  margin: 30vh 0;
+#input,
+.input-group {
+  padding: 0;
+  margin: 0;
 }
 
-#task_input {
+input {
+  box-sizing: border-box;
+  height: 3rem;
   border: none;
+  border-bottom: 0.5px solid darkgray;
+}
+
+input:focus {
   outline: none;
+}
+
+input::placeholder {
   font-style: italic;
   font-size: 20px;
 }
 
-#task_input:active {
-  border: none;
+#footer {
+  padding: 20px;
+  background-color: rgb(246, 244, 243);
 }
 
-hr {
-  border: 1px inset  rgba(0, 0, 0, 0.08);
-  width: 104%;
-  position: relative;
-  right: 5%;
-}
-
-.clear {
+#footer p {
   text-align: center;
-  background-color: rgb(246, 246, 246);
-  height: 4vh;
-  padding-top: 20px;
+  font-size: 25px;
 }
 
-.clear a {
-  color: gray;
+#litsBtn {
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
 }
