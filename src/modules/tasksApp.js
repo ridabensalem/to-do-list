@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 const tasksApp = () => {
 // grabing up the neede HTML elements to be used in JS codes................
 
@@ -96,6 +95,7 @@ const tasksApp = () => {
   });
 
   // Function to remove completed items from the listArray and the DOM
+  /* eslint-disable-next-line no-unused-expressions */
   () => {
     listArray = listArray.filter((item) => !item.completed);
     localStorage.setItem('listArray', JSON.stringify(listArray));
