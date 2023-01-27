@@ -2,14 +2,14 @@ const tasksApp = () => {
   /* eslint no-use-before-define: "error" */
   const btn = document.querySelector('form');
   const listInput = document.querySelector('#lists-input');
-  const cleanAllDone = document.querySelector('#clearDones');
+  const buttonClearAll = document.querySelector('#clear_all');
   const listHolder = document.querySelector('#list-holder');
 
   // ****Empty array for storing datas ****
   let listArray = [];
 
-  // Store the listArray in Local Storage when the form is submitted....😎😊😉😎............
-  // Define the todoListStore object using a function constructor😎😊😉😎............
+  // Store the listArray in Local Storage when the form is submitted...............
+  // Define the todoListStore object using a function constructor.........
 
   function TodoListStore(discription, completed, index) {
     this.discription = discription;
@@ -42,22 +42,34 @@ const tasksApp = () => {
                   <span><i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
               </div>`);
       listHolder.innerHTML = (datas).join(' ');
+      const checkbox = document.querySelectorAll('.form-check-input');
+      checkbox.forEach((item, index) => {
+        if (listArray[index].completed === true) {
+          item.checked = true;
+        }
+      });
     }
-    // cleaning the input field after submition process....😎😊😉😎............
+    // cleaning the input field after submition process...............
 
     static cleanInputs() {
       listInput.value = '';
     }
   }
 
-  // Retrieve the listArray from Local Storage when the page is loaded..😎😊😉😎............
+  // Retrieve the listArray from Local Storage when the page is loaded..............
 
-  // funtion for marking done lists😎😊😉😎............
+  // funtion for marking done lists............
 
   listHolder.addEventListener('change', (event) => {
+    // Update the list in local storage
+    const checkbox = event.target;
+    const taskElm = checkbox.parentNode.parentNode;
+    const listindex = Array.prototype.indexOf.call(listHolder.children, taskElm);
+    listArray[listindex].completed = checkbox.checked;
+    localStorage.setItem('listArray', JSON.stringify(listArray));
+
     if (event.target.type === 'checkbox' && event.target.checked) {
       event.target.nextElementSibling.style.textDecoration = 'line-through';
-      event.target.completed = true;
     } else if (event.target.type === 'checkbox' && !event.target.checked) {
       event.target.nextElementSibling.style.textDecoration = 'none';
     }
@@ -114,23 +126,13 @@ const tasksApp = () => {
     listArray = JSON.parse(localStorage.getItem('listArray'));
     UI.displayData();
   }
+  // delete the checked list from the task list
 
-  // Function to remove completed items from the listArray and the DOM
-  function removeCompleted() {
-    listArray = listArray.filter((item) => !item.completed);
+  buttonClearAll.addEventListener('click', () => {
+    listArray = listArray.filter((item) => item.completed !== true);
     localStorage.setItem('listArray', JSON.stringify(listArray));
-    UI.displayData();
-    // Select all elements with the completed class and remove them from the DOM
-    const completedElements = document.querySelectorAll('.completed');
-    completedElements.forEach((element) => element.remove());
-  }
 
-  // Add a click event listener to the cleanAllDone element
-  cleanAllDone.addEventListener('click', removeCompleted);
-
-  if (localStorage.getItem('listArray')) {
-    listArray = JSON.parse(localStorage.getItem('listArray'));
     UI.displayData();
-  }
+  });
 };
 export default tasksApp;
