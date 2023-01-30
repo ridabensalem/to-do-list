@@ -96,7 +96,7 @@ const tasksApp = () => {
       // Remove the element from the listArray
       listArray.splice(listindex, 1);
 
-      // Update the local storage with the updated listArray
+      // Update the local storage
       localStorage.setItem('listArray', JSON.stringify(listArray));
 
       // Remove the element from the DOM
