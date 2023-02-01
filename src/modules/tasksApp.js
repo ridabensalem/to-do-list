@@ -10,28 +10,6 @@ const tasksApp = () => {
 
   // Store the listArray in Local Storage when the form is submitted...............
   // Define the todoListStore object using a function constructor.........
-
-  function TodoListStore(discription, completed, index) {
-    this.discription = discription;
-    this.completed = completed;
-    this.index = index;
-  }
-
-  btn.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const index = listArray.length + 1;
-    const completed = false;
-    if (listInput.value !== '' || null) {
-      const todoObject = new TodoListStore(listInput.value, completed, index);
-      listArray = [...listArray, todoObject];
-      localStorage.setItem('listArray', JSON.stringify(listArray));
-      // eslint-disable-next-line no-use-before-define
-      UI.displayData();
-      // eslint-disable-next-line no-use-before-define
-      UI.cleanInputs();
-    }
-  });
-
   class UI {
     static displayData() {
       const datas = listArray.map((item) => `<div class="col-12" id="list" data-index=${item.index}>
@@ -55,6 +33,30 @@ const tasksApp = () => {
       listInput.value = '';
     }
   }
+
+
+  function TodoListStore(discription, completed, index) {
+    this.discription = discription;
+    this.completed = completed;
+    this.index = index;
+  }
+
+  btn.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const index = listArray.length + 1;
+    const completed = false;
+    if (listInput.value !== '' || null) {
+      const todoObject = new TodoListStore(listInput.value, completed, index);
+      listArray = [...listArray, todoObject];
+      localStorage.setItem('listArray', JSON.stringify(listArray));
+      // eslint-disable-next-line no-use-before-define
+      UI.displayData();
+      // eslint-disable-next-line no-use-before-define
+      UI.cleanInputs();
+    }
+   
+  });
+
 
   // Retrieve the listArray from Local Storage when the page is loaded..............
 
@@ -135,4 +137,4 @@ const tasksApp = () => {
     UI.displayData();
   });
 };
-export default tasksApp;
+module.exports =tasksApp;
